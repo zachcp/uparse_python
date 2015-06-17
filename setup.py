@@ -1,8 +1,28 @@
+import os, sys
 from setuptools import setup, find_packages
+
+
+if sys.argv[-1] == 'publish':
+    os.system('python setup.py sdist upload')
+    sys.exit()
 
 setup(
     name='uparse-python',
     version='0.1.0',
+    description='python scripts from UParse',
+    author='zach powers',
+    author_email='zcharlop@rockefeller.edu',
+    url='https://github.com/zachcp/uparse_python',
+    zip_safe=False,
+    license="GPL",
+    keywords=['uparse','usearch', 'uclust'],
+    classifiers=[
+        'Development Status :: 2 - Pre-Alpha',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: GPL License',
+        'Natural Language :: English',
+        'Programming Language :: Python :: 2.7',
+    ],
     install_requires=[
         'Click >= 4.0',
     ],
@@ -15,3 +35,4 @@ setup(
         uparse_uc2otutab.py = uparse_python.uc2otutab:uc2otutab
     ''',
 )
+
