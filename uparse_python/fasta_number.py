@@ -38,7 +38,7 @@ def fasta_number(fasta, prefix, needsize):
 	File = open(fasta,'r')
 	N = 0
 	while 1:
-		Line = fasta.readline()
+		Line = File.readline()
 		if len(Line) == 0:
 			break
 		Line = Line[:-1]
