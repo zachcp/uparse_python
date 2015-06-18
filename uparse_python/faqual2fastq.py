@@ -1,6 +1,6 @@
 import sys
 import click
-from uparse_python import fasta, fastq, die
+from uparse_python import fastq, die
 
 
 @click.command()

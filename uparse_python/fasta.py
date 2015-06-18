@@ -2,7 +2,7 @@ import subprocess
 import tempfile
 import progress
 
-from uparse_fasta.die import *
+from die import *
 
 TRUNC_LABELS=0
 
@@ -222,5 +222,5 @@ def ReplaceSize(Label, Size):
 			if Field != "":
 				NewLabel += Field + ";"
 	if not Done:
-		die.Die("size= not found in >" + Label)
+		Die("size= not found in >" + Label)
 	return NewLabel

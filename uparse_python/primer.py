@@ -1,4 +1,4 @@
-from uparse_fasta import die
+from uparse_python import die
 
 # 	Code	Means				Comp	CompCode
 # 	{ 'M', "AC",   'K' },		// GT		K

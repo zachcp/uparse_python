@@ -1,5 +1,4 @@
 import sys
-import fasta
 import fastq
 import die
 

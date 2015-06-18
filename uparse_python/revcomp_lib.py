@@ -1,8 +1,6 @@
 #!/usr/bin/python
 
-import sys
 import string
-from uparse_python import fasta
 
 Map = {}
 p = string.printable

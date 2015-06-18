@@ -14,7 +14,7 @@ from uparse_python import fasta, fastq, primer
 @click.option('--primer', type=click.STRING, prompt=True,help="primer string")
 @click.option('--barcodefilename', type=click.File('r'), prompt=True, help="barcodes in FASTA format")
 @click.option('--labelprefix', type=click.STRING, default="OTU_", help="fileprefix")
-def fastq_strip_barcode_relabel(fastq, primer,barcodefilename,lableprefix):
+def fastq_strip_barcode_relabel(fastq, primer,barcodefilename,labelprefix):
 	"""
 	see also: http://drive5.com/python/fastq_strip_barcode_relabel_py.html
 	"""
@@ -33,7 +33,7 @@ def fastq_strip_barcode_relabel(fastq, primer,barcodefilename,lableprefix):
 	PL = len(Primer)
 
 	#set glboal variables
-	global PL, LabelPrefix, Barcode, SeqCount, OutCount, BarcodeMismatchCount, PrimerMismatchCount
+	global PL, LabelPrefix, Barcode, SeqCount, OutCount, BarcodeMismatchCount, PrimerMismatchCount, MAX_PRIMER_MISMATCHES, Primer
 
 	#process data
 
