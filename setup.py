@@ -8,7 +8,7 @@ if sys.argv[-1] == 'publish':
 
 setup(
     name='uparse-python',
-    version='0.1.0',
+    version='0.1.1',
     description='python scripts from UParse',
     author='zach powers',
     author_email='zcharlop@rockefeller.edu',
@@ -19,7 +19,6 @@ setup(
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GPL License',
         'Natural Language :: English',
         'Programming Language :: Python :: 2.7',
     ],

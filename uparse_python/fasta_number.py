@@ -27,7 +27,7 @@ def GetSize(Label):
 	sys.exit(1)
 
 @click.command()
-@click.option('--fasta', type=click.File('r'), prompt=True,help="name of the FASTA file to renumber")
+@click.option('--fasta', type=click.Path(exists=True), prompt=True,help="name of the FASTA file to renumber")
 @click.option('--prefix', type=click.STRING, default="OTU_",help="string prefix")
 @click.option('--needsize/--no-needsize', default=False, help="add a size suffix")
 def fasta_number(fasta, prefix, needsize):
@@ -35,10 +35,10 @@ def fasta_number(fasta, prefix, needsize):
 	see: http://drive5.com/python/fasta_number_py.html
 	"""
 
-	File = open(fasta)
+	File = open(fasta,'r')
 	N = 0
 	while 1:
-		Line = File.readline()
+		Line = fasta.readline()
 		if len(Line) == 0:
 			break
 		Line = Line[:-1]
