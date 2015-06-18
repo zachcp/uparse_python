@@ -46,11 +46,11 @@ def fasta_number(fasta, prefix, needsize):
 			continue
 		if Line[0] == '>':
 			N += 1
-			if NeedSize:
+			if needsize:
 				Label = Line[1:].strip()
 				Size = GetSize(Label)
-				print ">%s%u;size=%u;" % (Prefix, N, Size)
+				print ">%s%u;size=%u;" % (prefix, N, Size)
 			else:
-				print ">%s%u" % (Prefix, N)
+				print ">%s%u" % (prefix, N)
 		else:
 			print Line
