@@ -4,15 +4,15 @@ from uparse_python import fasta, fastq, die
 
 
 @click.command()
-@click.option('--fasta', type=click.File('r'), prompt=True,help="name of the FASTA file")
-@click.option('--qual', type=click.File('r'), prompt=True,help="name of the QUAL file")
+@click.option('--fasta', type=click.Path(exists=True), prompt=True,help="name of the FASTA file")
+@click.option('--qual', type=click.Path(exists=True), prompt=True,help="name of the QUAL file")
 def faqual2fastq(fasta, qual):
 	"""
 	see: http://drive5.com/python/faqual2fastq_py.html
 	"""
 
-	ff = open(fasta)
-	fq = open(qual)
+	ff = open(fasta,'r')
+	fq = open(qual,'r')
 
 	while 1:
 		Linef = ff.readline()

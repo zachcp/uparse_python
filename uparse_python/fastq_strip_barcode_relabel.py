@@ -10,7 +10,7 @@ from uparse_python import fasta, fastq, primer
 
 
 @click.command()
-@click.option('--fastq', type=click.File('r'), prompt=True,help="name of the FASTQ file")
+@click.option('--fastq', type=click.Path(exists=True), prompt=True,help="name of the FASTQ file")
 @click.option('--primer', type=click.STRING, prompt=True,help="primer string")
 @click.option('--barcodefilename', type=click.File('r'), prompt=True, help="barcodes in FASTA format")
 @click.option('--labelprefix', type=click.STRING, default="OTU_", help="fileprefix")

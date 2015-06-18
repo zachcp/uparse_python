@@ -3,7 +3,7 @@ import click
 from uparse_python import uc, die, fasta
 
 @click.command()
-@click.option('--ucfile', type=click.File('r'), prompt=True,help="name of the UC file")
+@click.option('--ucfile', type=click.Path(exists=True), prompt=True,help="name of the UC file")
 def uc2otutab(ucfile):
 	"""
 	see:http://drive5.com/python/uc2otutab_py.html

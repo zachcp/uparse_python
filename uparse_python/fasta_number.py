@@ -2,20 +2,6 @@
 
 import sys
 import click
-from uparse_python import die
-
-# Prefix = ""
-# if len(sys.argv) > 2:
-# 	Prefix = sys.argv[2]
-#
-# NeedSize = 0
-# if len(sys.argv) > 3:
-# 	if sys.argv[3] == "-needsize":
-# 		NeedSize = 1
-# 	elif sys.argv[3] == "-nosize":
-# 		NeedSize = 0
-# 	else:
-# 		die.Die("Must specify -needsize or -nosize")
 
 def GetSize(Label):
 	Fields = Label.split(";")
